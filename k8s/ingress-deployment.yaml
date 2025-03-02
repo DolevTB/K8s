@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: nginx-ingress-controller
-          image: nginx-ingress-controller:latest
+          image: nginx-ingress:latest
           ports:
             - containerPort: 80
             - containerPort: 443
