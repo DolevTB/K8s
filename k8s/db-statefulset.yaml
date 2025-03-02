@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: mariadb:10.6.4-focal
+          image: 992382545251.dkr.ecr.us-east-1.amazonaws.com/dolevicats:mariadb-10.6.4-focal
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: "somewordpress"

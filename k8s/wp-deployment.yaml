@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: wordpress
-          image: wordpress:latest
+          image: 992382545251.dkr.ecr.us-east-1.amazonaws.com/dolevicats:wordpress-latest
           ports:
             - containerPort: 80
           env:
