@@ -4,7 +4,7 @@ metadata:
   name: dolev-ingress
   namespace: dolev
 spec:
-  ingressClassName: nginx
+  ingressClassName: dolev-ingress
   rules:
   - http:
       paths:
