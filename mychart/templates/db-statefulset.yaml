@@ -41,7 +41,7 @@ spec:
     spec:
       accessModes:
         - ReadWriteOnce
-      storageClassName: ebs-{{ .Values.nameOverride }}
+      storageClassName: ebs{{ .Values.nameOverride }}
       resources:
         requests:
           storage: 1Gi
