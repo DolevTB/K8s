@@ -2,11 +2,11 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: db-pvc
-  namespace: dolev
+  namespace: {{ .Values.namespaceOverride }}
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ebs-dolev
+  storageClassName: ebs-{{ .Values.nameOverride }}
