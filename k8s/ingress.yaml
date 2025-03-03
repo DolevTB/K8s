@@ -1,14 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: wordpress-ingress
+  name: dolev-ingress
   namespace: dolev
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /wordpress
+      - path: /
         pathType: Prefix
         backend:
           service:

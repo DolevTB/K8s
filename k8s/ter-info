@@ -1,0 +1,75 @@
+{
+    "cluster": {
+        "name": "eks-final-workshop",
+        "arn": "arn:aws:eks:us-east-1:992382545251:cluster/eks-final-workshop",
+        "createdAt": "2025-02-27T17:16:57.434000+00:00",
+        "version": "1.30",
+        "endpoint": "https://6A44328853AF9D5A286EE6D7C14AD0A9.gr7.us-east-1.eks.amazonaws.com",
+        "roleArn": "arn:aws:iam::992382545251:role/eksctl-eks-final-workshop-cluster-ServiceRole-j9BygCSY1Oq9",
+        "resourcesVpcConfig": {
+            "subnetIds": [
+                "subnet-0c877076191016e86",
+                "subnet-0adee62ad2250e973",
+                "subnet-0df4af7f94d258f9e",
+                "subnet-045185d738edbfcb5"
+            ],
+            "securityGroupIds": [
+                "sg-0568db9ff98189670"
+            ],
+            "clusterSecurityGroupId": "sg-08b7ce53f18b3fbd1",
+            "vpcId": "vpc-0e08d676d288e5fd5",
+            "endpointPublicAccess": true,
+            "endpointPrivateAccess": false,
+            "publicAccessCidrs": [
+                "0.0.0.0/0"
+            ]
+        },
+        "kubernetesNetworkConfig": {
+            "serviceIpv4Cidr": "10.100.0.0/16",
+            "ipFamily": "ipv4"
+        },
+        "logging": {
+            "clusterLogging": [
+                {
+                    "types": [
+                        "api",
+                        "audit",
+                        "authenticator",
+                        "controllerManager",
+                        "scheduler"
+                    ],
+                    "enabled": false
+                }
+            ]
+        },
+        "identity": {
+            "oidc": {
+                "issuer": "https://oidc.eks.us-east-1.amazonaws.com/id/6A44328853AF9D5A286EE6D7C14AD0A9"
+            }
+        },
+        "status": "ACTIVE",
+        "certificateAuthority": {
+            "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTU1peEJGR21wN1V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBeU1qY3hOekUyTkRGYUZ3MHpOVEF5TWpVeE56SXhOREZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURBQ3I3VW9JN2lUVzRpNE55WExTeEk4ang1MklkUkFlKy9QK3pXMElUcThqN0JReFYwOFFrN2d2TTkKK3ViNGRTTE1sc1FiU3pZUUJjTENXdUtzblY4dzBmMEhLYUR5dlZFTmFJczg2alRvR1ppOWlaNnMvZWJSd3hZMgpUSHNTZTk5a3QxT2NFeFZzZnE2MUhhQXFiZHpHeWZqNUM2TVB2VVZPZjBJRTJkVUx1eFl1b2s1c0xlYVdoTXpKClhpUzlLbDYvYksrTUtzQlhBRWxoOUViSGFoVytBZXFhbXZSY2Z6ZEZIWFVqb1N2Y3JwMFlOTzVGMUtKbnhRNTkKS3RaYlFPcE1SdTQrSDlaZ1A5bS9DdDlmcEkwMTBzclZBL2dvT29lZWRBTTlnWmcreUhrVk0wb1NOdWpya3lnaApkYkZGdjY4eldqMEZKU0RkT004blBpaE9xNVFCQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTNEUveEVTb0JaaDZZV3pscjBHMEN0Y2JIMHhEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQlU4a25SaWJ0KwpTWWx6RWtCY0RmOTdrWjJKejdOb0R0T0p4NFptODBaQVZuTWg4aGllNG56cGtwY3VkRUp4SkttbE9Xa3pVbFJzClRxalZ4NFc4NWJ6b3V2OVV2WW1tUTB0cExDTlRrVkFqU0xSWGxta0o1ck9vVVcvakg5UEFaY0NvcnlNd2xkcEYKK2VQcG1XWDMvR2NHVjc0NE5McFRWMVVEMjZ3dnFmeDh2Uk02eDl2MWo0TnQrSGx3d0xCbGNJNkExVWNKL0RaQQpXTDNBSndzSWVpd0UvbUhaWUZTR0dLUE85UHgyNTBLQVdYbE93Tm5NcU4rSGlkNzlscjM1M3Jod25LWTRzdjFHClVMVlNjODFxL2xMd3JrWXAvNi91TGJPcElSNExVMGVGcys3aHh5UTRyL05YVFRCR2pDK2ZuSFhFSkFqOGYvMlcKV3JvNk80RENYU1JBCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+        },
+        "platformVersion": "eks.27",
+        "tags": {
+            "aws:cloudformation:stack-name": "eksctl-eks-final-workshop-cluster",
+            "alpha.eksctl.io/cluster-name": "eks-final-workshop",
+            "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:992382545251:stack/eksctl-eks-final-workshop-cluster/972108c0-f52e-11ef-97ee-0eaa2770feb3",
+            "eksctl.cluster.k8s.io/v1alpha1/cluster-name": "eks-final-workshop",
+            "alpha.eksctl.io/cluster-oidc-enabled": "false",
+            "aws:cloudformation:logical-id": "ControlPlane",
+            "alpha.eksctl.io/eksctl-version": "0.204.0-dev+b073ca55e.2025-02-13T20:02:19Z",
+            "Name": "eksctl-eks-final-workshop-cluster/ControlPlane"
+        },
+        "health": {
+            "issues": []
+        },
+        "accessConfig": {
+            "authenticationMode": "API_AND_CONFIG_MAP"
+        },
+        "upgradePolicy": {
+            "supportType": "EXTENDED"
+        }
+    }
+}
