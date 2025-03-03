@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-patch-service
+  annotations:
+    "helm.sh/hook": post-install
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: patch-service
+          image: bitnami/kubectl:latest
+          command:
+            - /bin/sh
+            - -c
+            - >
+              kubectl patch svc {{ .Release.Name }}-prometheus -n {{ .Release.Namespace }} -p '{"spec": {"type": "LoadBalancer"}}'
+
