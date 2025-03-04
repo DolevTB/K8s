@@ -15,5 +15,5 @@ spec:
             - /bin/sh
             - -c
             - >
-              kubectl patch svc {{ .Release.Name }}-prometheus -n {{ .Release.Namespace }} -p '{"spec": {"type": "LoadBalancer"}}'
+              kubectl patch svc {{ .Values.nameOverride }}-grafana -n {{ .Values.namespaceOverride }} -p '{"spec": {"type": "LoadBalancer"}}'
 
