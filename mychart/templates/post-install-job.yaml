@@ -1,19 +1,22 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ .Release.Name }}-patch-service
+  name: post-install-job
   annotations:
     "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
 spec:
   template:
     spec:
-      restartPolicy: Never
+      serviceAccountName: default
       containers:
         - name: patch-service
           image: bitnami/kubectl:latest
           command:
-            - /bin/sh
-            - -c
-            - >
+            - "/bin/sh"
+            - "-c"
+            - |
               kubectl patch svc {{ .Values.nameOverride }}-grafana -n {{ .Values.namespaceOverride }} -p '{"spec": {"type": "LoadBalancer"}}'
+      restartPolicy: Never
 
