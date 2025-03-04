@@ -4,7 +4,7 @@ metadata:
   name: ebs{{ .Values.nameOverride }}
   namespace: {{ .Values.namespaceOverride }}
 provisioner: ebs.csi.aws.com
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
 parameters:
   type: gp3
   fsType: ext4
