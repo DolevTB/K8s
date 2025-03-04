@@ -21,9 +21,9 @@ Before installing the project, ensure you have the following installed and confi
    aws configure
    ```
 
-4. Authenticate Docker with AWS ECR:
+4.  Set the default Kubernetes namespace:
    ```sh
-   aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 992382545251.dkr.ecr.us-east-1.amazonaws.com
+   kubectl config set-context --current --namespace=[namespace]
    ```
 
 5. Add the Ingress Nginx Helm repository:
@@ -31,9 +31,9 @@ Before installing the project, ensure you have the following installed and confi
    helm repo add ingresks-nginx https://kubernetes.github.io/ingress-nginx
    ```
 
-6. Set the default Kubernetes namespace:
+6.  Authenticate Docker with AWS ECR (Make sure you are within your namespace):
    ```sh
-   kubectl config set-context --current --namespace=[namespace]
+   aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 992382545251.dkr.ecr.us-east-1.amazonaws.com
    ```
 
 7. Install the Ingress Nginx controller:
