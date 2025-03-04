@@ -3,7 +3,21 @@ entries:
   mychart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-03-04T03:01:57.448651461Z"
+    created: "2025-03-04T03:14:12.89926481Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 55.5.0
+    description: A Helm chart for Kubernetes
+    digest: bd6073aeb19b5765f48f95722a369b2687ab755a76b59fcbc3c70da7b37c7a79
+    name: mychart
+    type: application
+    urls:
+    - mychart-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-03-04T03:14:12.93271634Z"
     dependencies:
     - name: kube-prometheus-stack
       repository: https://prometheus-community.github.io/helm-charts
@@ -13,20 +27,6 @@ entries:
     name: mychart
     type: application
     urls:
-    - mychart-0.1.0.tgz
-    version: 0.1.0
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2025-03-04T03:01:57.481709215Z"
-    dependencies:
-    - name: kube-prometheus-stack
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 55.5.0
-    description: A Helm chart for Kubernetes
-    digest: 7ede2c5452d90c157c623ab9a6add2f39daf3b900f0870a49c2a136e8adda1b5
-    name: mychart
-    type: application
-    urls:
     - charts/mychart-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-04T03:01:57.411106662Z"
+generated: "2025-03-04T03:14:12.86495402Z"
