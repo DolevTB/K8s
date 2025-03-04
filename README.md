@@ -50,6 +50,10 @@ Before installing the project, ensure you have the following installed and confi
    ```sh
    helm install [name] mychart-0.1.0.tgz --set namespaceOverride=[namespace] --set nameOverride=[uniquename]
    ```
+10. change your grafana to LB to check it:
+    ```sh
+    kubectl patch svc [uniquename]-grafana -n [namespace] -p '{"spec": {"type": "LoadBalancer"}}'
+    ````
 
 ## Important Notes
 - Ensure `[unique-name]` is consistently used throughout all commands.
