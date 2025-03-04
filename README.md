@@ -8,7 +8,6 @@ Before installing the project, ensure you have the following installed and confi
 1. Install `kubectl`:
    ```sh
    sudo apt install -y kubectl
-   brew install kubectl
    ```
 
 2. Install `helm`:
