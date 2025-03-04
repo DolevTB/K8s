@@ -21,7 +21,7 @@ Before installing the project, ensure you have the following installed and confi
    aws configure
    ```
 
-4.  Set the default Kubernetes namespace:
+4. Set the default Kubernetes namespace:
    ```sh
    kubectl config set-context --current --namespace=[namespace]
    ```
@@ -31,7 +31,7 @@ Before installing the project, ensure you have the following installed and confi
    helm repo add ingresks-nginx https://kubernetes.github.io/ingress-nginx
    ```
 
-6.  Authenticate Docker with AWS ECR (Make sure you are within your namespace):
+6. Authenticate Docker with AWS ECR (Make sure you are within your namespace):
    ```sh
    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 992382545251.dkr.ecr.us-east-1.amazonaws.com
    ```
@@ -50,7 +50,7 @@ Before installing the project, ensure you have the following installed and confi
    ```sh
    helm install [name] mychart-0.1.0.tgz --set namespaceOverride=[namespace] --set nameOverride=[uniquename]
    ```
-10. change your grafana to LB to check it:
+10. Change your grafana to LB to check it:
     ```sh
     kubectl patch svc [uniquename]-grafana -n [namespace] -p '{"spec": {"type": "LoadBalancer"}}'
     ````
