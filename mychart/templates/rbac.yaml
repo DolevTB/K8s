@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ .Values.nameOverride }}
+  namespace: {{ .Values.namespaceOverride }}
+  annotations:
+    "helm.sh/hook": pre-install, pre-upgrade
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ .Values.nameOverride }}binding
+  namespace: {{ .Values.namespaceOverride }}
+  annotations:
+    "helm.sh/hook": pre-install, pre-upgrade
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: {{ .Values.namespaceOverride }}
+roleRef:
+  kind: Role
+  name: {{ .Values.nameOverride }}
+  apiGroup: rbac.authorization.k8s.io
