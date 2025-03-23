@@ -27,7 +27,7 @@ Before installing the project, ensure you have the following installed and confi
 
 5. Add the Ingress Nginx Helm repository:
    ```sh
-   helm repo add ingresks-nginx https://kubernetes.github.io/ingress-nginx
+   helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
    ```
 
 6. Authenticate Docker with AWS ECR (Make sure you are within your namespace):
